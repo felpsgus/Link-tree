@@ -1,0 +1,111 @@
+$hue: 217;
+
+$primary-color: hsla($hue, 90%, 43%, 1);
+$blue-dark: hsla($hue, 90%, 12%, 1);
+$blue-light: hsla($hue, 90%, 88%, 1);
+$blue-lighter: hsla($hue, 90%, 96%, 1);
+$black: hsla(240, 67%, 2%, 1);
+$blue-lighter: hsla($hue, 90%, 96%, 1);
+$bg-dark: hsla($hue, 90%, 12%, 0.8);
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'JetBrains Mono', sans-serif;
+  box-sizing: border-box;
+  background-image: url(../assets/bg-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 50rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.content {
+  background-color: $bg-dark;
+  border-radius: 1.6rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 4.8rem;
+
+  color: $blue-lighter;
+
+  img {
+    width: 20rem;
+    clip-path: circle();
+    background-color: $primary-color;
+  }
+
+  h1 {
+    font-size: 3.4rem;
+    color: $blue-light;
+    margin-top: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    background-color: $primary-color;
+    padding-block: 1.4rem;
+    margin-top: 2.4rem;
+
+    color: $blue-lighter;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 1.6rem;
+    // border: 2px solid $blue-lighter;
+
+    &:hover {
+      filter: brightness(1.2);
+      transition: filter 0.4s;
+    }
+
+    svg {
+      width: 3rem;
+
+      path {
+        fill: $blue-lighter;
+      }
+    }
+  }
+}
